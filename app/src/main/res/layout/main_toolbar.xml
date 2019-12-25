@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/btnGoBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_keyboard_arrow_left"/>
+            <ImageView
+                android:id="@+id/btnGoForward"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_keyboard_arrow_right"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btnGoBack"/>
+
+            <TextView
+                android:id="@+id/titleBar"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnGoForward"
+                android:layout_toLeftOf="@id/btnRefresh"
+                android:textAlignment="center"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Title"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:visibility="gone"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_toLeftOf="@id/btnClose"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/btnRefresh"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_repeat"
+                android:layout_toLeftOf="@id/btnClose"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_close_black"
+                android:background="@drawable/refresh_selector"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#e3e3e3"/>
+</LinearLayout>
